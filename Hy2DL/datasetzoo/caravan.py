@@ -146,6 +146,7 @@ class CARAVAN(BaseDataset):
         """
         data_dir = Path(self.path_data)
         basin = catch_id
+    
 
         # Get the subdataset name from the basin string.
         subdataset_name = basin.split('_')[0].lower()
@@ -155,6 +156,6 @@ class CARAVAN(BaseDataset):
 
         # Add other variables if required - Comment out this section in main branch (bwcluster access)
         # Create a new column "qobs_lead" with discharge values shifted by 7 time units
-        #df['qobs_lead'] = df['qobs'].shift(-7)
+        df['qobs_lead'] = df['streamflow'].shift(-7)
 
         return df    
