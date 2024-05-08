@@ -1,0 +1,1 @@
+Epoch: 1  | Loss training: 0.018 | Loss validation: 0.546 | Epoch time: 6170.1  s | LR:0.00100 
