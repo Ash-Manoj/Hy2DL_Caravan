@@ -1,4 +1,4 @@
-# Hy<sup>2</sup>DL: Hybrid Hydrological modeling using Deep Learning methods
+# Conceptual Models for Manoj j et al. (2024)
 [![DOI](https://zenodo.org/badge/684006081.svg)](https://zenodo.org/doi/10.5281/zenodo.8289020)
 
 <p align="justify">
@@ -7,6 +7,8 @@ Hy<sup>2</sup>DL is a python library to create hydrological models for rainfall-
 In addition to Long Short Term Memory (LSTM) network architectures, the repository also features hybrid hydrological models which use an LSTM network combined with a process based rainfall-runoff model and transformer based hydrological model. Regional hydrological models for several datasets namely the CAMELS_GB, CAMELS_US, CAMELS_CH, CAMELS_DE and the CARAVAN are at the user's easy disposal.
 </p>
 <br />
+
+The HBV Conceptual model runs for Manoj J et al. [2024](https://doi.org/10.5194/hess-2024-375) was implemented using this repository. 
 
 ## Structure of the repository:
 
@@ -26,21 +28,21 @@ Following is a quick overview of the repository structure:
 ## Dependencies
 The packages used to run the codes are indicated at the beginning of each notebook. It must be considered that the codes for the data-driven models run better in GPU, therefore a PyTorch version that supports GPU should be installed!
 
-## Citation:
-This code is part of our study 
-
+## Citation
+If you use this code in your research, please cite:
 ```
-Acuña Espinoza, E., Loritz, R., Álvarez Chaves, M., Bäuerle, N., and Ehret, U.: To Bucket or not to Bucket? Analyzing the performance and interpretability of hybrid hydrological models with dynamic parameterization, (https://doi.org/10.5194/hess-28-2705-2024, 2024)
+@Article{hess-2024-375,
+AUTHOR = {Manoj J, A. and Loritz, R. and Gupta, H. and Zehe, E.},
+TITLE = {Can discharge be used to inversely correct precipitation?},
+JOURNAL = {Hydrology and Earth System Sciences Discussions},
+VOLUME = {2024},
+YEAR = {2024},
+PAGES = {1--24},
+URL = {https://hess.copernicus.org/preprints/hess-2024-375/},
+DOI = {10.5194/hess-2024-375}
+}
 ```
-- If you want to reproduce the experiments of this paper, run the scripts: Hybrid_LSTM_SHM.ipynb, Hybrid_LSTM_Bucket.ipynb, Hybrid_LSTM_NonSense.ipynb, LSTM_CAMELS_GB.ipynb and LSTM_CAMELS_US.ipynb located in the path Hy2DL/experiments/.
-- If you want to reproduce the figures without re-running the experiments, copy the files located in the result folder of the repository https://zenodo.org/records/11103634 and paste them into Hy2DL/results/. Then run the notebook Results_Analysis.ipynb.
 
 ## Authors:
- - Eduardo Acuña Espinoza (eduardo.espinoza@kit.edu)
- - Ralf Loritz (ralf.loritz@kit.edu)
- - Manuel Álvarez Cháves (manuel.alvarez-chaves@simtech.uni-stuttgart.de)
+ - Ashish Manoj J (ashish.manoj@kit.edu)
 
- ## Disclaimer:
- No warranty is expressed or implied regarding the usefulness or completeness of the information and documentation provided. References to commercial products do not imply endorsement by the Authors. The concepts, materials, and methods used in the algorithms and described in the documentation are for informational purposes only. The Authors has made substantial effort to ensure the accuracy of the algorithms and the documentation, but the Authors shall not be held liable, nor his employer or funding sponsors, for calculations and/or decisions made on the basis of application of the scripts and documentation. The information is provided "as is" and anyone who chooses to use the information is responsible for her or his own choices as to what to do with the data. The individual is responsible for the results that follow from their decisions.
-
-This web site contains external links to other, external web sites and information provided by third parties. There may be technical inaccuracies, typographical or other errors, programming bugs or computer viruses contained within the web site or its contents. Users may use the information and links at their own risk. The Authors of this web site excludes all warranties whether express, implied, statutory or otherwise, relating in any way to this web site or use of this web site; and liability (including for negligence) to users in respect of any loss or damage (including special, indirect or consequential loss or damage such as loss of revenue, unavailability of systems or loss of data) arising from or in connection with any use of the information on or access through this web site for any reason whatsoever (including negligence).
